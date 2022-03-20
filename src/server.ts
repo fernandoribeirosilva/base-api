@@ -16,7 +16,6 @@ server.use(express.urlencoded({ extended: true }));
 server.use('/api', apiRoutes);
 
 server.use((req: Request, res: Response) => {
-    // res.status(404);
     res.status(404).json({ error: 'Endpoint não encontrado.' });
 });
 
